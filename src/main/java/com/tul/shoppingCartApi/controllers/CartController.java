@@ -35,7 +35,7 @@ public class CartController {
 
         return new ResponseEntity<>(cartServices.createCart(), HttpStatus.CREATED);
     }
-    @PostMapping("{idCart}/products")
+    @PostMapping("/{idCart}/products")
     public ResponseEntity<?> addProductToCart(@PathVariable String idCart, @RequestBody ShoppingProductRequest request) {
         try {
 
@@ -48,7 +48,7 @@ public class CartController {
             return new ResponseEntity<>(productNotFoundException.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
-    @PutMapping("{idCart}/products")
+    @PutMapping("/{idCart}/products")
     public ResponseEntity<?> updateProductOfCart(@PathVariable String idCart, @RequestBody ShoppingProductRequest request) {
         try {
 
@@ -81,7 +81,7 @@ public class CartController {
             return new ResponseEntity<>(productNotInCartException.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
-    @PostMapping("/{idCart}/checkout")
+    @GetMapping("/{idCart}/checkout")
     public ResponseEntity<?> deleteProductFromCart(@PathVariable String idCart) {
         Double total = null;
         try {

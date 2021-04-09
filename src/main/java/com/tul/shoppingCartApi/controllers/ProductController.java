@@ -23,7 +23,7 @@ public class ProductController {
 
         return new ResponseEntity<>(productServices.getAllProducts(), HttpStatus.OK);
     }
-    @DeleteMapping("/idproduct/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteProduct(@PathVariable String id) {
         try {
             productServices.deleteProduct(id);
