@@ -1,5 +1,7 @@
 # Shopping Cart Api
 
+Make requests to https://shopping-cart-api-tul.herokuapp.com/api/v1
+
 ### Prerequisites
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Java 8](https://www.oracle.com/co/java/technologies/javase/javase-jdk8-downloads.html) -  Development Environment 
@@ -36,18 +38,18 @@ The endpoints of the API are the following:
     - /products: Get all products
     - /carts: Get all carts
     - /carts/{id}/products: Get products of a cart
-    - /{idCart}/checkout: Get checkout of a cart
+    - /carts/{idCart}/checkout: Get checkout of a cart
 - POST request:
     - /products: Creates a new product
-    - /create: Creates a new cart
-    - /{idCart}/products: Add product to cart
+    - /carts/create: Creates a new cart
+    - /carts/{idCart}/products: Add product to cart
 - PUT request:
     - /products: Update a product
-    - /{idCart}/products: Change the quantity of a product in a cart
+    - /carts/{idCart}/products: Change the quantity of a product in a cart
   
  - DELETE request:
-    - /{id}: Delete a product
-    - /{idCart}/products/{idProduct}: Delete a product of a cart
+    - /products/{id}: Delete a product
+    - /carts/{idCart}/products/{idProduct}: Delete a product of a cart
 
 Make the requests to localhost:8080/api/v1
 
