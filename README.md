@@ -12,10 +12,8 @@ Make requests to https://shopping-cart-api-tul.herokuapp.com/api/v1
 1. Clone the repository
 
 ```
-git clone https://github.com/juancamilo399/MasivianCleanCode
+git clone https://github.com/juancamilo399/ShoppingCartApi
 ```
-
-Note: to run the application, you should create the environment variable (REDIS_HOST) in this case is 172.17.0.1
 
 2. Compile the projet
 
@@ -52,6 +50,31 @@ The endpoints of the API are the following:
     - /carts/{idCart}/products/{idProduct}: Delete a product of a cart
 
 Make the requests to localhost:8080/api/v1
+
+## Body examples:
+
+Example body of a product
+
+```
+
+{
+    "description":"product",
+    "name":"product",
+    "sku":"product",
+    "price":1.34,
+    "type":"Descuento"
+}
+```
+
+Example body of addProductToCart 
+
+```
+
+{
+    "productId":<id_product>,
+    "quantity": 1
+}
+```
 
 ## Built With
 
